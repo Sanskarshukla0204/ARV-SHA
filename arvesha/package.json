@@ -1,0 +1,40 @@
+{
+  "name": "arvesha-clothing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arvésha Clothing storefront, checkout and admin",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "setup:secrets": "node scripts/setup-secrets.mjs",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed:starter": "tsx scripts/seed-starter.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "launch:check": "tsx scripts/launch-check.ts"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "^2.0.2",
+    "@vercel/blob": "^1.0.0",
+    "mailchecker": "^6.0.0",
+    "next": "^15.5.0",
+    "pg": "^8.13.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "resend": "^4.0.0",
+    "sharp": "^0.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
