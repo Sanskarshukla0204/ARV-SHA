@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import SplashScreen from "../../components/splash/SplashScreen";
-import ConsentNotice from "../../components/ConsentNotice";
-
+import SplashScreen from "../components/splash/SplashScreen";
+import ConsentNotice from "../components/ConsentNotice";
 const display = Cormorant_Garamond({
   subsets: ["latin"],
     weight: ["400", "500", "600"],
