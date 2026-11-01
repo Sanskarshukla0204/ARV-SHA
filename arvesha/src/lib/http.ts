@@ -108,7 +108,7 @@ type NextRouteContext = { params?: Promise<Record<string, string>> };
 type Result = Response | Record<string, unknown> | void;
 
 export function route<B = undefined>(opts: RouteOptions<B>, fn: (ctx: RouteCtx<B> & { user: SessionUser | null }) => Promise<Result>) {
-  return async function handler(req: Request, routeCtx?: NextRouteContext): Promise<Response> {
+     return async function handler(req: Request, routeCtx: { params: Promise<Record<string, string>> } = { params: Promise.resolve({}) }): Promise<Response> {
     const started = Date.now();
     try {
       if (!opts.skipOriginCheck) assertSameOrigin(req);
